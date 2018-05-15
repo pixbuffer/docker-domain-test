@@ -11,11 +11,11 @@ services:
     build: ./stuff
     environment:
       - TEST_VAL
-      - DYNDEPLOY_DOMAIN
+      - SQUASH_DOMAIN
 
   goods-service:
     build: ./stuff
     command: python alt-server.py
     environment:
       - TEST_VAL
-      - DYNDEPLOY_DOMAIN
+      - SQUASH_DOMAIN
