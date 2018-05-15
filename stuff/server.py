@@ -1,15 +1,18 @@
 from flask import Flask
 
 app = Flask(__name__)
+app.url_map.host_matching = True
 
 
-@app.route('/')
-def index():
+@app.route('/', host='<host>')
+def index(host):
+    if 'deployrun.com' in host:
+        return '<body><h2>It is flask domain-specific page.</h2></body>'
     return '<body>Hello world. <a href="/about/">About this page</a>.</body>'
 
 
-@app.route('/about')
-def about():
+@app.route('/about/', host='<host>')
+def about(host):
     return '<body>This is the about page</body>'
 
 
