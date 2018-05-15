@@ -13,7 +13,7 @@ def index(host):
 
 @app.route('/about/', host='<host>')
 def about(host):
-    return '<body>This is the about page</body>'
+    return f'<body>This is the about page for {host}</body>'
 
 
 if __name__ == "__main__":
