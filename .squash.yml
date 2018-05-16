@@ -1,9 +1,7 @@
 environment:
   TEST_VAL=42
 ready_wait:
-  120
-context_path:
-  .
+  15
 compose_files:
   alternate:
     filename:
